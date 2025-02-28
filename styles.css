@@ -180,7 +180,33 @@ main {
     width: 100%;
     max-width: 300px;
 }
-
+.win-board {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-align: center;
+}
+.win-message {
+    background-color: var(--light-color);
+    height: 400px;
+    max-width: 500px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 5px;
+    /* pointer-events: none; */
+}
 select {
     width: 100%;
     padding: 10px;
