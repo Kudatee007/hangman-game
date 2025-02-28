@@ -71,7 +71,7 @@ const categories = {
 let currentWord = ""; //split each letter as an item in a n array
 let guessedLetters = [];
 let score = 0;
-let maxTries = 8;
+let maxTries = 6;
 let wrongGuesses = 0;
 
 // state variables
@@ -149,7 +149,7 @@ function createKeyboard() {
 
 function resetHangman() {
   hangmanParts.forEach((part, index) => {
-    if (index < 2) {
+    if (index < 4) {
       part.style.display = "block";
     } else {
       part.style.display = "none";
@@ -203,7 +203,7 @@ function updateWordDisplay(letter) {
 }
 function updateHangman() {
   if (wrongGuesses + 1 < hangmanParts.length) {
-    hangmanParts[wrongGuesses + 1].style.display = "block";
+    hangmanParts[wrongGuesses + 3].style.display = "block";
   }
 }
 function isWordComplete() {
@@ -218,7 +218,7 @@ function isWordComplete() {
 }
 
 function handleWin() {
-  messageElement.textContent = "20 points";
+  messageElement.textContent = "10 points";
   messageElement.style.color = "var(--success-color)";
 
   // ✅ Update the score
